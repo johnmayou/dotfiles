@@ -1,0 +1,5 @@
+require("config.lazy")
+require("config.plugins")
+require("config.lsp")
+require("config.treesitter")
+require("config.options")
