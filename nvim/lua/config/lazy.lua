@@ -7,7 +7,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "nvim-lua/plenary.nvim" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  { "nvim-telescope/telescope.nvim" },
   { "lewis6991/gitsigns.nvim" },
   { "folke/trouble.nvim" },
   { "nvim-lualine/lualine.nvim" },
@@ -25,5 +24,16 @@ require("lazy").setup({
         { "mason-org/mason.nvim", opts = {} },
         "neovim/nvim-lspconfig",
     },
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
+    config = function()
+      print("telescope")
+    end
   }
 })

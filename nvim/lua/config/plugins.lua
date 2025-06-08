@@ -1,5 +1,4 @@
 require("gitsigns").setup()
-require("telescope").setup()
 require("trouble").setup()
 require("lualine").setup()
 require("nvim-tree").setup()
