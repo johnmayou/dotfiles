@@ -1,23 +1,33 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig = require("lspconfig")
+
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "gopls", "lua_ls", "pyright", "ts_ls", "rust_analyzer" },
-})
+  ensure_installed = {
+    "gopls",
+    "lua_ls",
+    "pyright",
+    "ts_ls",
+    "rust_analyzer"
+  },
+  handlers = {
+    function(server_name)
+      lspconfig[server_name].setup({
+        capabilities = capabilities,
+      })
+    end,
 
--- Native LSP setup
-vim.lsp.config("gopls", {})
-vim.lsp.config("pyright", {})
-vim.lsp.config("tsserver", {}) -- or ts_ls if you want the newer one
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = { globals = { "vim" } }
-    }
+    ["lua_ls"] = function()
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      })
+    end,
   }
 })
-vim.lsp.config("rust_analyzer", {})
-
-vim.lsp.enable("gopls")
-vim.lsp.enable("pyright")
-vim.lsp.enable("tsserver") -- or ts_ls
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("rust_analyzer")
