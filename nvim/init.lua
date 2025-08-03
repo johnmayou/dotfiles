@@ -6,4 +6,4 @@ require("config.treesitter")
 require("config.completion")
 
 vim.g.python3_host_prog = os.getenv("HOME") .. "/.venvs/nvim/bin/python"
-vim.o.signcolumn = "yes:2"
+vim.o.signcolumn = "yes"
