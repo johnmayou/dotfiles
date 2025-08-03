@@ -1,3 +1,4 @@
 alias fg="$HOME/bin/fg"
 alias ff="$HOME/bin/ff"
 alias ls="eza"
+alias cat='bat --paging=never'
