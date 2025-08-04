@@ -7,3 +7,4 @@ require("config.completion")
 
 vim.g.python3_host_prog = os.getenv("HOME") .. "/.venvs/nvim/bin/python"
 vim.o.signcolumn = "yes"
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
