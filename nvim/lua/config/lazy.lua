@@ -12,6 +12,17 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim" },
   { "nvim-tree/nvim-tree.lua" },
   {
+    "nanotech/jellybeans.vim",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.o.termguicolors = true
+    end,
+    config = function()
+      vim.cmd.colorscheme("jellybeans")
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
