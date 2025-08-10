@@ -12,14 +12,16 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim" },
   { "nvim-tree/nvim-tree.lua" },
   {
-    "nanotech/jellybeans.vim",
-    lazy = false,
-    priority = 1000,
-    init = function()
-      vim.o.termguicolors = true
-    end,
+    'projekt0n/github-nvim-theme',
+    name = 'github-theme',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      vim.cmd.colorscheme("jellybeans")
+      require('github-theme').setup({
+        --
+      })
+
+      vim.cmd('colorscheme github_dark_dimmed')
     end,
   },
   {
