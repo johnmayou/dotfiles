@@ -1,0 +1,8 @@
+[user]
+	name = John Mayou
+	email = john@johnmayou.com
+[alias]
+	br = !git branch | cat
+	co = checkout
+[core]
+	autocrlf = input
