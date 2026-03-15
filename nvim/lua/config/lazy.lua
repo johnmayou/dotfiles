@@ -36,12 +36,34 @@ require("lazy").setup({
     },
   },
   {
-    "mason-org/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
-        "neovim/nvim-lspconfig",
-    },
+    -- This seems like a good config: https://github.com/mrusme/dotfiles/blob/e956d3a663843ec36251847a53006dddb9dcdcab/.config/nvim/init.lua
+    "neovim/nvim-lspconfig",
+    config = function()
+      -- In the future, let's do something like this instead:
+      -- https://github.com/softwareQinc/nvim-sq/blob/a773f60b0ae41134022a5a1f3711ced2fecbfc9e/lua/plugins/lsp.lua#L81
+      local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      vim.lsp.config("zls", {
+        cmd = { vim.fn.expand("~/.zls/bin/zls") },
+        filetypes = { "zig" },
+        root_markers = { "build.zig", ".git" },
+        capabilities = lsp_capabilities,
+      })
+      vim.lsp.enable("zls")
+
+      vim.lsp.config("gopls", {
+        cmd = { "gopls" },
+        filetypes = { "go" },
+        root_makers = { "go.mod", "go.sum", ".git" },
+        capabilities = lsp_capabilities,
+        settings = {
+          gopls = {
+            gofumpt = true,
+          }
+        }
+      })
+      vim.lsp.enable("gopls")
+    end
   },
   {
     'nvim-telescope/telescope.nvim',
