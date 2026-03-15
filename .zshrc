@@ -1,6 +1,7 @@
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-zstyle ':omz:update' frequency 30
+ZSH_THEME="robbyrussell"
+zstyle ':omz:update' mode disabled
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -12,7 +13,6 @@ export PATH="$HOME/bin:$PATH"
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
-. "/Users/johnmayou/.deno/env"
 
 # Bash
 autoload -U +X bashcompinit && bashcompinit
@@ -35,9 +35,15 @@ export PATH="$HOME/.zvm/bin:$PATH"
 # Direnv
 eval "$(direnv hook zsh)"
 
+# fnm: Fast Node Manager
+eval "$(fnm env)"
+
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 # Aliases
-alias fg="$HOME/bin/fg"
+alias cat="$HOME/bin/kat"
 alias ff="$HOME/bin/ff"
+alias fg="$HOME/bin/fg"
 alias ls="eza"
-alias cat='bat --paging=never'
 alias vim='nvim'
