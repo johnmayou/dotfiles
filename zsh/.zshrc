@@ -38,8 +38,6 @@ eval "$(mise activate zsh)"
 eval "$(atuin init zsh)"
 
 # Aliases
-alias ff="$HOME/bin/ff"
-alias fg="$HOME/bin/fg"
 alias ls="eza"
 alias vim='nvim'
 alias dotsync='mise -C "$HOME/Projects/dotfiles" run sync'

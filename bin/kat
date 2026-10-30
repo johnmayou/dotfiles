@@ -1,5 +1,0 @@
-if [[ $1 == *.md ]]; then
-	PAGER='bat' glow -p "$1"
-else
-	bat --paging=never "$1"
-fi

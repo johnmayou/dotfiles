@@ -1,2 +1,0 @@
-#!/bin/bash
-rg --line-number . | fzf | awk -F: '{print $1":"$2}' | xargs -r code -g
