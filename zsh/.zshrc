@@ -5,6 +5,10 @@ zstyle ':omz:update' mode disabled
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Vars
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # Go
 export PATH="$HOME/go/bin:$PATH"
 
@@ -41,8 +45,10 @@ eval "$(fnm env)"
 # Ruby
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+# Atuin
+eval "$(atuin init zsh)"
+
 # Aliases
-alias cat="$HOME/bin/kat"
 alias ff="$HOME/bin/ff"
 alias fg="$HOME/bin/fg"
 alias ls="eza"
