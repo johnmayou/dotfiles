@@ -208,7 +208,7 @@ for the owner, deliberately not designed here. Omit if none.]
 If all lenses return `design-sound` and the delete list is empty, say so in three
 lines and stop. That outcome is the skill working, not failing.
 
-Save the report to `.notes/reviews/YYYY-MM-DD-rethink-<slug>.md`. Create `.notes/` if missing and add it to `.git/info/exclude`.
+Save the report to `.notes/reviews/YYYY-MM-DD-rethink-<slug>.md`. Create `.notes/` if missing.
 Frontmatter: `type: rethink`, date,
 branch, commit, base_branch, tags.
 

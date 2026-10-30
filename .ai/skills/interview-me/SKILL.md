@@ -87,7 +87,7 @@ After the interview completes, proceed directly to Phase 4.
 ## Phase 4: Spec Generation
 
 ### Output Location
-Save the spec to `.notes/specs/<spec-name>.md`. Create `.notes/` if missing and add it to `.git/info/exclude`.
+Save the spec to `.notes/specs/<spec-name>.md`. Create `.notes/` if missing.
 
 ### Spec Format
 Generate **dynamic sections** based on what the interview revealed. Do NOT use a fixed template. Common sections include (but are not limited to):

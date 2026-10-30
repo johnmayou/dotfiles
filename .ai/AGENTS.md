@@ -37,9 +37,10 @@ Never narrate the code, talk to the reviewer, or record what was removed. Git hi
 
 ## Generated Files
 
-Store generated plans, specs, reviews, and mockups in `.notes/`. Create it if missing and add it to `.git/info/exclude`.
+Store generated plans, specs, reviews, and mockups in `.notes/`. Create it if missing.
 
 ## Tools
 
 - Runtimes and CLI tools come from mise. Rust comes from rustup, because a mise-managed rust overrides `rust-toolchain.toml`.
 - Prefer a repository's justfile, Makefile, or mise tasks over direct commands.
+- Prefer `ghissues` over `gh issue list`, and `ghcomments` over raw `gh` for PR feedback.

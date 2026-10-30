@@ -1,4 +1,7 @@
 # Global tools for every machine. Per-machine tools live in mise.<env>.toml.
+[env]
+RIPGREP_CONFIG_PATH = "{{env.HOME}}/.config/ripgrep/rg.conf"
+
 [tools]
 go = "1.26"
 node = "lts"

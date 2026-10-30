@@ -34,6 +34,38 @@ eval "$(direnv hook zsh)"
 # Mise
 eval "$(mise activate zsh)"
 
+# Keep secrets out of zsh history. Return 2 keeps a command in session memory only.
+_zsh_history_secret_filter() {
+  emulate -L zsh
+  setopt extended_glob
+  local cmd="${1%%$'\n'}"
+  local -a patterns=(
+    '(#i)*TOKEN=*'
+    '(#i)*API_KEY=*'
+    '(#i)*API_SECRET=*'
+    '(#i)*SECRET_KEY=*'
+    '(#i)*_SECRET=*'
+    '(#i)*PASSWORD=*'
+    '(#i)*PASSWD=*'
+    '(#i)*_PASS=*'
+    '(#i)*AWS_SECRET_ACCESS_KEY=*'
+    '(#i)*PRIVATE_KEY=*'
+    '(#i)*Authorization:*'
+    '(#i)*Bearer *'
+    '(#i)* --password *'
+    '(#i)*ghp_*'
+    '(#i)*glpat-*'
+  )
+  for pat in "${patterns[@]}"; do
+    if [[ "$cmd" == ${~pat} ]]; then
+      return 2
+    fi
+  done
+  return 0
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook zshaddhistory _zsh_history_secret_filter
+
 # Atuin
 eval "$(atuin init zsh)"
 

@@ -103,7 +103,7 @@ Legacy `tidy` is not a useful gate for these HTML5 mockups. The rendered snapsho
 
 ## Save and open
 
-Create `.notes/` if missing and add it to `.git/info/exclude`. Keep the same path for revisions in the same design thread. Run `open <path>` once, when the artifact is ready to inspect, not after every edit.
+Create `.notes/` if missing. Keep the same path for revisions in the same design thread. Run `open <path>` once, when the artifact is ready to inspect, not after every edit.
 
 ## Iteration
 

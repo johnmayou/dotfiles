@@ -9,6 +9,13 @@
 "~/.npmrc" = ".npmrc"
 "~/Library/Preferences/pnpm/config.yaml" = ".config/pnpm/config.yaml"
 "~/.config/uv/uv.toml" = ".config/uv/uv.toml"
+"~/.gitignore_global" = "git/.gitignore_global"
+"~/.config/bat/config" = ".config/bat/config"
+"~/.config/ripgrep/rg.conf" = ".config/ripgrep/rg.conf"
+"~/Library/Application Support/com.mitchellh.ghostty/config" = ".config/ghostty/config"
+"~/Library/Application Support/eza/theme.yml" = ".config/eza/theme.yml"
+"~/Library/Application Support/lazygit/config.yml" = ".config/lazygit/config.yml"
+"~/Library/Preferences/glow/glow.yml" = ".config/glow/glow.yml"
 "~/.config/mise" = { source = ".config/mise", mode = "symlink-each" }
 
 [bootstrap.packages]
@@ -29,6 +36,7 @@
 "brew:neovim" = "latest"
 "brew:ripgrep" = "latest"
 "brew:tmux" = "latest"
+"brew:trufflehog" = "latest"
 "brew:wget" = "latest"
 
 "brew-cask:claude" = "latest"

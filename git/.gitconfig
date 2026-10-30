@@ -4,5 +4,19 @@
 [alias]
 	br = !git branch | cat
 	co = checkout
+	st = status
+	gone = !git fetch -p && git branch -vv | grep \"origin/.*: gone]\" | awk \"{print \\$1}\" | xargs git branch -D
 [core]
 	autocrlf = input
+	excludesFile = ~/.gitignore_global
+	editor = nvim
+[init]
+	defaultBranch = main
+[rerere]
+	enabled = true
+[pull]
+	ff = only
+[feature]
+	manyFiles = true
+[fetch]
+	writeCommitGraph = true
