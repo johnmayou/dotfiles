@@ -19,6 +19,11 @@
     }
   },
   "syncClaudeAiSkills": false,
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "tui": "fullscreen",
   "model": "opus",
   "permissions": {
