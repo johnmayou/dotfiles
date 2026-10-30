@@ -19,6 +19,7 @@
     }
   },
   "syncClaudeAiSkills": false,
+  "autoMemoryEnabled": false,
   "attribution": {
     "commit": "",
     "pr": "",

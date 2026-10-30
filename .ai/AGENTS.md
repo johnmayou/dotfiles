@@ -8,6 +8,10 @@
 - After completing work, state what changed, not anticipated benefits.
 - Run formatters, linters, and tests after implementing.
 
+## Project Notes
+
+Before working in a repository, read `~/Projects/dotfiles/.ai/projects/<repo-name>.md` if it exists. Save project-specific instructions there.
+
 ## Architecture
 
 - Prefer deleting obsolete code over keeping deprecation shims, versioned names, or "removed" comments, unless a public contract or the task requires compatibility.
@@ -26,6 +30,7 @@ Never narrate the code, talk to the reviewer, or record what was removed. Git hi
 ## Git
 
 - Do not include Claude attribution or co-author lines in commits or PRs.
+- A clean Plannotator review means commit without asking. Pushing still needs an explicit request.
 - Never bypass commit signing or hooks. Fix the underlying issue.
 - Never @-mention users unless explicitly asked.
 - The diff shows what changed, so a non-trivial commit body covers intent and why this approach: the problem, alternatives rejected, and invariants to preserve. A mechanical change gets one line.
