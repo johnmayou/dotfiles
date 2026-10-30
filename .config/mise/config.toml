@@ -1,0 +1,22 @@
+# Global tools for every machine. Per-machine tools live in mise.<env>.toml.
+[tools]
+go = "1.26"
+node = "lts"
+python = "3.13"
+uv = "latest"
+"github:backnotprop/plannotator" = { version = "latest", matching = "plannotator-" }
+
+# Go
+golangci-lint = "latest"
+staticcheck = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"go:github.com/pressly/goose/v3/cmd/goose" = "latest"
+
+# Node
+"npm:pnpm" = "latest"
+"npm:prettier" = "latest"
+
+# Python
+poetry = "1.8"
+prek = "latest"
+"pipx:pytest" = "latest"

@@ -1,0 +1,14 @@
+# Personal-machine extras.
+[bootstrap.packages]
+"brew:cloudflared" = "latest"
+"brew:flyctl" = "latest"
+"brew:goreleaser" = "latest"
+"brew:hugo" = "latest"
+"brew:ollama" = "latest"
+"brew:rustup" = "latest"
+"brew:sqlc" = "latest"
+
+"brew-cask:calibre" = "latest"
+"brew-cask:nordpass" = "latest"
+"brew-cask:nordvpn" = "latest"
+"brew-cask:nvidia-geforce-now" = "latest"

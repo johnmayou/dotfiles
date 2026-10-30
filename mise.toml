@@ -1,0 +1,53 @@
+[dotfiles]
+"~/.zshrc" = "zsh/.zshrc"
+"~/.gitconfig" = "git/.gitconfig"
+"~/bin" = "bin"
+"~/.claude/skills" = ".ai/skills"
+"~/.config/mise" = { source = ".config/mise", mode = "symlink-each" }
+
+[bootstrap.packages]
+"brew:atuin" = "latest"
+"brew:bat" = "latest"
+"brew:cloc" = "latest"
+"brew:direnv" = "latest"
+"brew:eza" = "latest"
+"brew:fd" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:git-filter-repo" = "latest"
+"brew:git-lfs" = "latest"
+"brew:glow" = "latest"
+"brew:just" = "latest"
+"brew:lazygit" = "latest"
+"brew:make" = "latest"
+"brew:neovim" = "latest"
+"brew:ripgrep" = "latest"
+"brew:tmux" = "latest"
+"brew:wget" = "latest"
+
+"brew-cask:claude" = "latest"
+"brew-cask:claude-code" = "latest"
+"brew-cask:cleanshot" = "latest"
+"brew-cask:cmux" = "latest"
+"brew-cask:docker-desktop" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:google-drive" = "latest"
+"brew-cask:obsidian" = "latest"
+"brew-cask:postico" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:zoom" = "latest"
+
+[tasks.stamp]
+description = "Pin this machine's MISE_ENV in ~/.config/mise/miserc.toml (run once, explicitly)"
+run = '''
+#!/usr/bin/env bash
+set -euo pipefail
+if [ -z "${MISE_ENV:-}" ]; then
+  echo "stamp: MISE_ENV is not set; run as: MISE_ENV=personal mise run stamp" >&2
+  exit 1
+fi
+mkdir -p ~/.config/mise
+printf 'env = [%s]\n' "$(printf '%s' "$MISE_ENV" | tr -d '[:space:]' | sed 's/[^,]*/"&"/g')" > ~/.config/mise/miserc.toml
+echo "stamp: wrote ~/.config/mise/miserc.toml -> $(cat ~/.config/mise/miserc.toml)"
+'''

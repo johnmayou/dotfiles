@@ -1,0 +1,5 @@
+# SPS (work) machine tools.
+[tools]
+act = "latest"
+kubeconform = "latest"
+kubectl = "latest"

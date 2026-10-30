@@ -22,28 +22,17 @@ export PATH="/opt/homebrew/bin:$PATH"
 autoload -U +X bashcompinit && bashcompinit
 
 # Terraform
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+complete -o nospace -C terraform terraform
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
-# Zig
-export PATH="$HOME/.zvm/bin:$PATH"
-
 # Direnv
 eval "$(direnv hook zsh)"
 
-# fnm: Fast Node Manager
-eval "$(fnm env)"
-
-# Ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# Mise
+eval "$(mise activate zsh)"
 
 # Atuin
 eval "$(atuin init zsh)"
