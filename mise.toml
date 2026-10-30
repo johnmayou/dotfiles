@@ -1,5 +1,6 @@
 [dotfiles]
 "~/.zshrc" = "zsh/.zshrc"
+"~/.zprofile" = "zsh/.zprofile"
 "~/.gitconfig" = "git/.gitconfig"
 "~/bin" = "bin"
 "~/.claude/skills" = ".ai/skills"
@@ -10,8 +11,12 @@
 "~/Library/Preferences/pnpm/config.yaml" = ".config/pnpm/config.yaml"
 "~/.config/uv/uv.toml" = ".config/uv/uv.toml"
 "~/.gitignore_global" = "git/.gitignore_global"
+"~/.config/atuin/config.toml" = ".config/atuin/config.toml"
 "~/.config/bat/config" = ".config/bat/config"
+"~/.config/cmux/cmux.json" = ".config/cmux/cmux.json"
 "~/.config/ripgrep/rg.conf" = ".config/ripgrep/rg.conf"
+"~/Library/Application Support/Code/User/keybindings.json" = ".config/vscode/keybindings.json"
+"~/Library/Application Support/Code/User/settings.json" = ".config/vscode/settings.json"
 "~/Library/Application Support/com.mitchellh.ghostty/config" = ".config/ghostty/config"
 "~/Library/Application Support/eza/theme.yml" = ".config/eza/theme.yml"
 "~/Library/Application Support/lazygit/config.yml" = ".config/lazygit/config.yml"
@@ -79,6 +84,10 @@ run = ["git pull --autostash --ff-only", "mise bootstrap --yes"]
 [tasks.upgrade]
 description = "Upgrade declared packages and tools"
 run = ["mise bootstrap packages upgrade --yes", "mise upgrade"]
+
+[tasks.vscode-extensions]
+description = "Install VS Code extensions listed in .config/vscode/extensions.txt"
+run = "xargs -L1 code --install-extension < .config/vscode/extensions.txt"
 
 [tasks.stamp]
 description = "Pin this machine's MISE_ENV in ~/.config/mise/miserc.toml (run once, explicitly)"

@@ -60,3 +60,4 @@ desktop.ini
 CLAUDE.local.md
 PLAN.local.md
 .notes/
+**/.claude/settings.local.json
