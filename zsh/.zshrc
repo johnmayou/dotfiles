@@ -42,3 +42,5 @@ alias ff="$HOME/bin/ff"
 alias fg="$HOME/bin/fg"
 alias ls="eza"
 alias vim='nvim'
+alias dotsync='mise -C "$HOME/Projects/dotfiles" run sync'
+alias dotup='mise -C "$HOME/Projects/dotfiles" run upgrade'

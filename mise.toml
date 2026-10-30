@@ -4,6 +4,11 @@
 "~/bin" = "bin"
 "~/.claude/skills" = ".ai/skills"
 "~/.claude/CLAUDE.md" = ".ai/AGENTS.md"
+"~/.claude/agents" = ".claude/agents"
+"~/.claude/settings.json" = ".claude/settings.json"
+"~/.npmrc" = ".npmrc"
+"~/Library/Preferences/pnpm/config.yaml" = ".config/pnpm/config.yaml"
+"~/.config/uv/uv.toml" = ".config/uv/uv.toml"
 "~/.config/mise" = { source = ".config/mise", mode = "symlink-each" }
 
 [bootstrap.packages]
@@ -38,6 +43,34 @@
 "brew-cask:postico" = "latest"
 "brew-cask:visual-studio-code" = "latest"
 "brew-cask:zoom" = "latest"
+
+[bootstrap.macos.dock]
+tilesize = 36
+autohide = true
+show_recents = false
+
+[bootstrap.macos.keyboard]
+key_repeat = 1
+initial_key_repeat = 10
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+NSAutomaticWindowAnimationsEnabled = false
+NSAutomaticQuoteSubstitutionEnabled = false
+NSAutomaticDashSubstitutionEnabled = false
+
+[bootstrap.macos.defaults."com.apple.dock"]
+expose-animation-duration = 0.1
+springboard-show-duration = 0
+springboard-hide-duration = 0
+springboard-page-duration = 0
+
+[tasks.sync]
+description = "Pull this repo and converge the machine"
+run = ["git pull --autostash --ff-only", "mise bootstrap --yes"]
+
+[tasks.upgrade]
+description = "Upgrade declared packages and tools"
+run = ["mise bootstrap packages upgrade --yes", "mise upgrade"]
 
 [tasks.stamp]
 description = "Pin this machine's MISE_ENV in ~/.config/mise/miserc.toml (run once, explicitly)"
