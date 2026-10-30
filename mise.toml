@@ -3,6 +3,7 @@
 "~/.gitconfig" = "git/.gitconfig"
 "~/bin" = "bin"
 "~/.claude/skills" = ".ai/skills"
+"~/.claude/CLAUDE.md" = ".ai/AGENTS.md"
 "~/.config/mise" = { source = ".config/mise", mode = "symlink-each" }
 
 [bootstrap.packages]
