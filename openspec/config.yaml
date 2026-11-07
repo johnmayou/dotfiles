@@ -1,5 +1,22 @@
 schema: spec-driven
 
+context: |
+  Personal dotfiles for two macOS machines: `personal` and `sps` (work). Per-machine
+  overlays via MISE_ENV (`mise.<env>.toml`), pinned per machine by `mise run stamp`.
+  Links, packages, and macOS prefs are declared in repo-root mise*.toml; global tools
+  in .config/mise/*.toml. No standalone setup scripts.
+  Rust comes from rustup, never mise (mise rust sets RUSTUP_TOOLCHAIN, overriding
+  rust-toolchain.toml).
+  macOS tool configs often live under ~/Library (pnpm, glow, eza, lazygit, ghostty),
+  not ~/.config; verify the real path before linking.
+  Avoid `mise run sync`/`dotsync` on the personal Mac: hand-installed apps show as
+  cask installs.
+  Never track or print credentials (gh hosts.yml, .kube/config, .docker/config.json,
+  .boto, .ssh).
+  Agent rules live in .ai/AGENTS.md and .ai/projects/<repo>.md, never in agent memory.
+  Commit directly to main, no branches, only after user approval (a clean Plannotator
+  review counts). Push only on explicit request. No Claude attribution.
+
 # Project context (optional)
 # Add only constraints that should guide OpenSpec artifacts and workflows.
 # Include constraints an agent cannot infer by reading the code.
