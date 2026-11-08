@@ -13,9 +13,9 @@ Neovim config at `~/.config/nvim` is a fork of kickstart.nvim. It should come ba
 ## Capabilities
 
 ### New Capabilities
-- `machine-bootstrap`: what `mise bootstrap` provisions on a fresh machine beyond links and packages.
 
 ### Modified Capabilities
+- `machine-bootstrap`: what `mise bootstrap` provisions on a fresh machine beyond links and packages.
 
 ## Impact
 

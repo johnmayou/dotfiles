@@ -13,9 +13,9 @@ Skills adapted from hay-kot/dotfiles still reference tools this user doesn't use
 ## Capabilities
 
 ### New Capabilities
-- `agent-skills`: the shared skill set linked to `~/.claude/skills`, and what it may reference.
 
 ### Modified Capabilities
+- `agent-skills`: the shared skill set linked to `~/.claude/skills`, and what it may reference.
 
 ## Impact
 
