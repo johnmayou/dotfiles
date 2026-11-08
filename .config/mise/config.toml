@@ -3,7 +3,9 @@
 RIPGREP_CONFIG_PATH = "{{env.HOME}}/.config/ripgrep/rg.conf"
 
 [tools]
+duckdb = "latest"
 go = "1.26"
+java = "27"
 node = "lts"
 python = "3.13"
 uv = "latest"

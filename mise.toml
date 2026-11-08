@@ -54,6 +54,7 @@
 "brew-cask:google-drive" = "latest"
 "brew-cask:obsidian" = "latest"
 "brew-cask:postico" = "latest"
+"brew-cask:postman-cli" = "latest"
 "brew-cask:visual-studio-code" = "latest"
 "brew-cask:zoom" = "latest"
 

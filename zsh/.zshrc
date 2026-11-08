@@ -69,6 +69,9 @@ add-zsh-hook zshaddhistory _zsh_history_secret_filter
 # Atuin
 eval "$(atuin init zsh)"
 
+# User-local binaries (uv tools, standalone installers)
+export PATH="$HOME/.local/bin:$PATH"
+
 # Aliases
 alias ls="eza"
 alias vim='nvim'
