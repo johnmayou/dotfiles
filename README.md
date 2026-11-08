@@ -25,5 +25,6 @@ mise bootstrap --yes
 - Tools and runtimes: `.config/mise/`
 - Skills: `.ai/skills/`
 - Agent rules: `.ai/AGENTS.md`
+- Registry tokens: never in the repo. On SPS machines, `~/.config/npm/sps.npmrc` and `~/.config/uv/uv.sps.toml` (untracked, chmod 600), wired up in `mise.sps.toml`
 
 Rust stays on rustup, because mise overrides `rust-toolchain.toml` pins.

@@ -9,6 +9,7 @@ java = "27"
 node = "lts"
 python = "3.13"
 uv = "latest"
+"github:rosenbjerg/local-review" = "latest"
 "github:backnotprop/plannotator" = { version = "latest", matching = "plannotator-" }
 
 # Go

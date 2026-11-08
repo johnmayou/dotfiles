@@ -3,7 +3,7 @@
 "~/.zprofile" = "zsh/.zprofile"
 "~/.gitconfig" = "git/.gitconfig"
 "~/bin" = "bin"
-"~/.claude/skills" = ".ai/skills"
+"~/.claude/skills" = { source = ".ai/skills", mode = "symlink-each" }
 "~/.claude/CLAUDE.md" = ".ai/AGENTS.md"
 "~/.claude/agents" = ".claude/agents"
 "~/.claude/settings.json" = ".claude/settings.json"

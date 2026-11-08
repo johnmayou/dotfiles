@@ -1,2 +1,13 @@
 # SPS (work) machine extras.
+
+# Work registries need tokens, which live in untracked files outside the repo
+# (chmod 600). The linked shared configs stay token-free.
+[env]
+NPM_CONFIG_GLOBALCONFIG = "{{env.HOME}}/.config/npm/sps.npmrc"
+UV_CONFIG_FILE = "{{env.HOME}}/.config/uv/uv.sps.toml"
+
 [bootstrap.packages]
+
+[tasks.vscode-extensions-sps]
+description = "Install work-only VS Code extensions listed in .config/vscode/extensions.sps.txt"
+run = "xargs -L1 code --install-extension < .config/vscode/extensions.sps.txt"
