@@ -12,6 +12,12 @@ MISE_ENV=personal mise run stamp   # or MISE_ENV=sps
 mise bootstrap --yes
 ```
 
+### SPS machines
+
+- Run mise package commands, including `dotsync` and `dotup`, with `GITHUB_TOKEN=$(gh auth token)` set. switchyard comes from the private `spscommerce/sps` tap, and mise can't read it without auth.
+- Create `~/.config/npm/sps.npmrc` and `~/.config/uv/uv.sps.toml` (chmod 600) with JFrog tokens before using npm or uv.
+- Apps installed by hand before bootstrap block their casks. Hand them to brew once: `brew install --cask --adopt <cask>` if the installed version matches the cask, `--force` if it's older. A fresh machine doesn't need this.
+
 ## Daily use
 
 - `dotsync`: pull and apply everything
