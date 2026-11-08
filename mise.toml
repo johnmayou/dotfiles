@@ -58,7 +58,6 @@
 "brew-cask:cmux" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:obsidian" = "latest"
-"brew-cask:postico" = "latest"
 "brew-cask:postman-cli" = "latest"
 
 [bootstrap.macos.dock]
