@@ -4,9 +4,13 @@
 "brew:flyctl" = "latest"
 "brew:goreleaser" = "latest"
 "brew:hugo" = "latest"
-"brew:ollama" = "latest"
-"brew:rustup" = "latest"
 "brew:sqlc" = "latest"
+
+# Jamf manages these on the SPS machine.
+"brew-cask:google-chrome" = "latest"
+"brew-cask:zoom" = "latest"
+"brew-cask:docker-desktop" = "latest"
+"brew-cask:visual-studio-code" = "latest"
 
 "brew-cask:calibre" = "latest"
 "brew-cask:nordpass" = "latest"

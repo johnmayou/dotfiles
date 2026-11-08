@@ -7,6 +7,17 @@ NPM_CONFIG_GLOBALCONFIG = "{{env.HOME}}/.config/npm/sps.npmrc"
 UV_CONFIG_FILE = "{{env.HOME}}/.config/uv/uv.sps.toml"
 
 [bootstrap.packages]
+"brew:awscli" = "latest"
+"brew:cfn-lint" = "latest"
+"brew:helm" = "latest"
+"brew:k9s" = "latest"
+"brew:kubectx" = "latest"
+"brew:kubelogin" = "latest"
+"brew:openapi-generator" = "latest"
+"brew:powershell" = "latest"
+
+"brew-cask:pgadmin4" = "latest"
+"brew-cask:switchyard" = "latest"
 
 [tasks.vscode-extensions-sps]
 description = "Install work-only VS Code extensions listed in .config/vscode/extensions.sps.txt"

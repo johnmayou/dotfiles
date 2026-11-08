@@ -1,7 +1,6 @@
 # Personal-machine tools.
 [tools]
 # rust is left to rustup: a mise-managed rust overrides rust-toolchain.toml pins.
-ruby = "3.4"
 zig = "0.15"
 terraform = "1.12"
 
@@ -12,4 +11,3 @@ terraform = "1.12"
 "cargo:just-lsp" = "latest"
 "cargo:mdbook" = "latest"
 "cargo:mdbook-toc" = "latest"
-"cargo:tree-sitter-cli" = "latest"
