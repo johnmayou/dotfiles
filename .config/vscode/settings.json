@@ -56,7 +56,6 @@
   "zig.zls.enableArgumentPlaceholders": false,
   "workbench.activityBar.location": "bottom",
   "claudeCode.preferredLocation": "panel",
-  "chat.disableAIFeatures": true,
   "git.openRepositoryInParentFolders": "always",
   "yaml.disableSchemaDetection": [
     "**/.github/workflows/*.yml",
@@ -158,4 +157,5 @@
       "url": "https://s3.amazonaws.com/cfn-resource-specifications-us-east-1-prod/schemas/2.15.0/all-spec.json",
     },
   ],
+  "@azure.argTenant": "",
 }

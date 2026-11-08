@@ -11,6 +11,7 @@
 "brew-cask:zoom" = "latest"
 "brew-cask:docker-desktop" = "latest"
 "brew-cask:visual-studio-code" = "latest"
+"brew-cask:google-drive" = "latest"
 
 "brew-cask:calibre" = "latest"
 "brew-cask:nordpass" = "latest"
