@@ -33,6 +33,7 @@ Never narrate the code, talk to the reviewer, or record what was removed. Git hi
 - A clean Plannotator review means commit without asking. Pushing still needs an explicit request.
 - Never bypass commit signing or hooks. Fix the underlying issue.
 - Never @-mention users unless explicitly asked.
+- SPS pipelines release from commit messages: `SemanticRelease@1` runs with `failOnNoVersion: true` and the default Conventional Commits preset, so a merge with no releasable commit fails the build and deploys nothing. Start every commit headline with `fix:` or `feat:` (optionally `fix(scope):`, e.g. `fix(DA-2995):`), with `!` or a `BREAKING CHANGE:` footer for a major. `chore:`, `docs:`, `style:`, `refactor:`, `build:`, or a ticket-first headline like `DA-2995(fix):` release nothing; `DA-2995(fix):` doesn't even parse. Use `fix:` for dependency, CVE, and docs-only changes that must ship. Mirror the same prefix in the PR title, since squash merges use it. Check with `git log --format=%s origin/HEAD..HEAD` before pushing. Docs: https://developer.docs.spscommerce.com/platform/building-deploying/azure-pipelines/tasks/artifact-versioning-tasks#semanticrelease
 - The diff shows what changed, so a non-trivial commit body covers intent and why this approach: the problem, alternatives rejected, and invariants to preserve. A mechanical change gets one line.
 
 ## Generated Files
