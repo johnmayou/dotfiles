@@ -44,3 +44,4 @@ Store generated plans, specs, reviews, and mockups in `.notes/`. Create it if mi
 - Runtimes and CLI tools come from mise. Rust comes from rustup, because a mise-managed rust overrides `rust-toolchain.toml`.
 - Prefer a repository's justfile, Makefile, or mise tasks over direct commands.
 - Prefer `ghissues` over `gh issue list`, and `ghcomments` over raw `gh` for PR feedback.
+- When the user asks to see a diff ("show diff"), open it in Plannotator's code review UI instead of printing it in chat.
