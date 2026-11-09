@@ -10,21 +10,21 @@
 
 ## 2. Rust
 
-- [ ] 2.1 Remove the mise `rust@stable` symlink install by hand and run `mise reshim`. Verify: `mise prune --dry-run` lists nothing, and no rustup/cargo/rustc shims remain.
-- [ ] 2.2 Delete the standalone rustup and its proxies from `~/.cargo/bin` (move to Trash), keeping `~/.rustup`. Verify: `which -a rustup cargo rustc` lists only `/opt/homebrew/bin`; `rustc --version` honors a `rust-toolchain.toml`.
-- [ ] 2.3 `cargo uninstall` the copies of mise-declared cargo tools. Verify: `cargo install --list` lists none of them.
-- [ ] 2.4 Ask the user whether `rustlings` is kept (declare `cargo:rustlings` in `.config/mise/mise.personal.toml`) or removed. Verify: it's either a mise install or gone.
-- [ ] 2.5 Confirm rust-analyzer still starts in neovim and VS Code.
+- [x] 2.1 Remove the mise `rust@stable` symlink install by hand and run `mise reshim`. Verify: `mise prune --dry-run` lists nothing, and no rustup/cargo/rustc shims remain.
+- [x] 2.2 Delete the standalone rustup and its proxies from `~/.cargo/bin` (move to Trash), keeping `~/.rustup`. Verify: `which -a rustup cargo rustc` lists only `/opt/homebrew/bin`; `rustc --version` honors a `rust-toolchain.toml`.
+- [x] 2.3 `cargo uninstall` the copies of mise-declared cargo tools. Verify: `cargo install --list` lists none of them.
+- [x] 2.4 Ask the user whether `rustlings` is kept (declare `cargo:rustlings` in `.config/mise/mise.personal.toml`) or removed; user chose remove. Verify: `cargo install --list` is empty.
+- [x] 2.5 Confirm rust-analyzer still starts in neovim and VS Code.
 
 ## 3. Runtimes
 
-- [ ] 3.1 Reinstall pipx tools (poetry, pytest, pynvim) with `uv tool install`, then remove the pipx venvs. Verify: each command resolves under `~/.local/bin` to a uv tool.
-- [ ] 3.2 `brew uninstall` fnm, pipx, pyenv, ruby, and zig. Verify: `brew leaves --installed-on-request` lists none of the runtimes `machine-bootstrap` bans.
+- [x] 3.1 Remove pipx tools. poetry, pytest, and prek are mise-declared (drop the pipx and `uv tool` copies); pynvim, which nothing declares, moves to `uv tool`. Verify: each of poetry/pytest/prek resolves only to mise, `pynvim-python` to a uv tool, and neovim's `has("python3")` is 1.
+- [x] 3.2 `brew uninstall` fnm, pipx, pyenv, ruby, and zig. Verify: `brew leaves --installed-on-request` lists none of the runtimes `machine-bootstrap` bans.
 
 ## 4. Docs
 
-- [ ] 4.1 Remove the "avoid `mise run sync`/`dotsync` on the personal Mac" line from `openspec/config.yaml`. Verify: `dotsync` runs to completion with no cask installs.
-- [ ] 4.2 Move the README adopt/force bullet out of "SPS machines" and note that it needs an interactive terminal for sudo. Verify: README renders and the commands match `machine-bootstrap`.
+- [x] 4.1 Remove the "avoid `mise run sync`/`dotsync` on the personal Mac" line from `openspec/config.yaml`. Verify: `dotsync` runs to completion with no cask installs.
+- [x] 4.2 Move the README adopt/force bullet out of "SPS machines" and note that it needs an interactive terminal for sudo. Verify: README renders and the commands match `machine-bootstrap`.
 - [ ] 4.3 Confirm the CleanShot 5 license; otherwise restore 4.8.8 from the backup. Verify: CleanShot opens licensed.
 
 ## Workflow follow-up

@@ -14,11 +14,11 @@ Each tool declared in the repo SHALL resolve on PATH to the copy its declaring m
 - **THEN** no tool declared as `cargo:<name>` in `.config/mise/*.toml` is listed
 
 ### Requirement: Rustup from Homebrew
-The only rustup SHALL be the `brew:rustup` package declared in `mise.toml`, linked into `/opt/homebrew/bin`. Toolchains SHALL stay in `~/.rustup`. Neither mise nor a standalone installer SHALL provide `rustup` or its `cargo`/`rustc` proxies.
+The only rustup SHALL be the `brew:rustup` package declared in `mise.toml`, with its proxies reached via `$(brew --prefix rustup)/bin` on PATH. Toolchains SHALL stay in `~/.rustup`. Neither mise nor a standalone installer SHALL provide `rustup` or its `cargo`/`rustc` proxies.
 
 #### Scenario: rustup on PATH
 - **WHEN** running `which -a rustup cargo rustc` in a login shell
-- **THEN** each resolves only under `/opt/homebrew/bin`
+- **THEN** each resolves first under `/opt/homebrew/opt/rustup/bin`, and none under `~/.cargo/bin`
 
 #### Scenario: Toolchain pins still apply
 - **WHEN** running `rustc --version` in a directory with a `rust-toolchain.toml`

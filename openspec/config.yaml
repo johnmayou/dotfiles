@@ -9,8 +9,6 @@ context: |
   rust-toolchain.toml).
   macOS tool configs often live under ~/Library (pnpm, glow, eza, lazygit, ghostty),
   not ~/.config; verify the real path before linking.
-  Avoid `mise run sync`/`dotsync` on the personal Mac: hand-installed apps show as
-  cask installs.
   Never track or print credentials (gh hosts.yml, .kube/config, .docker/config.json,
   .boto, .ssh).
   Agent rules live in .ai/AGENTS.md and .ai/projects/<repo>.md, never in agent memory.
