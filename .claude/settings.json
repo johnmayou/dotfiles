@@ -32,7 +32,7 @@
     "sessionUrl": false
   },
   "tui": "fullscreen",
-  "model": "opus",
+  "model": "claude-opus-5-5",
   "permissions": {
     "deny": [
       "Bash(rm -rf:*)",
