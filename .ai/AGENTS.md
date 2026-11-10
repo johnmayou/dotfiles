@@ -4,6 +4,7 @@
 
 - Default to acting on code and the local environment: edits, tests, local git. Ask only for genuine scope changes or hard-to-reverse decisions.
 - Never communicate through external systems unless explicitly asked in the current session. That covers PR and issue comments, review replies, and messages. Prior approval of a similar action does not count.
+- End every PR or issue comment, review reply, and message you post with `_Written by Claude_` on its own line, so readers know it didn't come from me directly.
 - Be direct. Evaluate suggestions on merit, not agreeableness.
 - After completing work, state what changed, not anticipated benefits.
 - Run formatters, linters, and tests after implementing.
